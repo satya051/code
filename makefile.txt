@@ -1,0 +1,10 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+
+all: compress
+
+compress: main.cpp huffman.cpp
+    $(CXX) $(CXXFLAGS) main.cpp huffman.cpp -o compress
+
+clean:
+    rm -f compress
